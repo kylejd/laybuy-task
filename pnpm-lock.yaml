@@ -5,6 +5,7 @@ specifiers:
   '@emotion/styled': ^11.8.1
   '@mui/icons-material': ^5.8.3
   '@mui/material': ^5.8.3
+  '@playwright/test': ^1.15.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0
   '@testing-library/user-event': 14.2.0
@@ -34,6 +35,7 @@ dependencies:
   styled-components: 5.3.5_ef5jwxihqo6n7gxfmzogljlgcm
 
 devDependencies:
+  '@playwright/test': 1.22.2
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_ef5jwxihqo6n7gxfmzogljlgcm
   '@testing-library/user-event': 14.2.0
@@ -1129,6 +1131,15 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: true
+
+  /@playwright/test/1.22.2:
+    resolution: {integrity: sha512-cCl96BEBGPtptFz7C2FOSN3PrTnJ3rPpENe+gYCMx4GNNDlN4tmo2D89y13feGKTMMAIVrXfSQ/UmaQKLy1XLA==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 17.0.42
+      playwright-core: 1.22.2
     dev: true
 
   /@popperjs/core/2.11.5:
@@ -3970,6 +3981,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: true
+
+  /playwright-core/1.22.2:
+    resolution: {integrity: sha512-w/hc/Ld0RM4pmsNeE6aL/fPNWw8BWit2tg+TfqJ3+p59c6s3B6C8mXvXrIPmfQEobkcFDc+4KirNzOQ+uBSP1Q==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /postcss-value-parser/4.2.0:

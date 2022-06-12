@@ -14,7 +14,7 @@ yarn dev
 pnpm dev
 ```
 
-## Run Jest Tests
+### Run Jest Tests
 
 ```bash
 npm dev
@@ -22,4 +22,22 @@ npm dev
 yarn test
 # or
 pnpm test
+```
+
+### Run e2e Playwright Tests
+
+#### Setup Playwright
+
+```bash
+npx playwright install
+
+npx playwright install-deps
+```
+
+```bash
+npm test:e2e
+# or
+yarn test:e2e
+# or
+pnpm test:e2e
 ```
