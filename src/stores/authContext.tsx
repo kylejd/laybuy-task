@@ -39,8 +39,9 @@ export const AuthProvider: FunctionComponent<AuthProviderProps> = (props) => {
     if (!localStorage.getItem("isAuthenticated")) {
       return;
     }
+
     authenticate();
-  }, []);
+  }, [router]);
 
   // protected routes
   useEffect(() => {

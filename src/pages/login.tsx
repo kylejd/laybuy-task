@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   Container,
   Box,
@@ -14,13 +14,21 @@ import { AuthContext } from "../stores/authContext";
 import { useRouter } from "next/router";
 
 const Login: NextPage = () => {
-  const { authenticate } = useContext(AuthContext);
+  const { authenticate, isAuthenticated } = useContext(AuthContext);
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const [isInvalidLogin, setIsInvalidLogin] = useState(false);
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      return;
+    }
+
+    router.push("/");
+  }, [isAuthenticated, router]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
